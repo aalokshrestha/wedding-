@@ -366,32 +366,38 @@ input[type=text]:focus,textarea:focus{border-bottom-color:var(--gold)}
     <div class="rule" aria-hidden="true"><i></i></div>
     <h2 class="title" data-k="rsvpTitle"></h2>
     <p class="lead" data-k="rsvpLead"></p>
-
-   <form action="https://api.web3forms.com/submit" method="POST" id="rsvp-form">
+<form action="https://api.web3forms.com/submit" method="POST" id="rsvp-form">
     <!-- Web3Forms Access Key -->
     <input type="hidden" name="access_key" value="d30a2190-b2c2-499c-9db8-e6640c6f5ea9">
-    
-    <!-- Optional: Redirect to a custom page after submitting -->
-    <!-- <input type="hidden" name="redirect" value="https://aalokshrestha.github.io/wedding-/"> -->
 
-    <label for="name">Your Name / नाम:</label><br>
-    <input type="text" id="name" name="Guest Name" required placeholder="Enter your full name"><br><br>
+    <div class="field">
+        <label class="field-label" for="name">Your Name / नाम</label>
+        <input type="text" id="name" name="Guest Name" required placeholder="Enter your full name">
+    </div>
 
-    <label for="attendance">Will you attend? / उपस्थिति:</label><br>
-    <select id="attendance" name="Attendance" required>
-        <option value="Yes">Yes, I will attend / आउनेछु</option>
-        <option value="No">Sorry, I cannot attend / आउन सक्दिन</option>
-    </select><br><br>
+    <div class="field">
+        <label class="field-label" for="attendance">Will you attend? / उपस्थिति</label>
+        <select id="attendance" name="Attendance" style="width:100%; padding:.5rem 0; background:transparent; color:inherit; border:0; border-bottom:1.5px solid var(--gold-line);" required>
+            <option value="Yes" style="color:#000;">Yes, I will attend / आउनेछु</option>
+            <option value="No" style="color:#000;">Sorry, I cannot attend / आउन सक्दिन</option>
+        </select>
+    </div>
 
-    <label for="guests">Number of Guests / अतिथि संख्या:</label><br>
-    <input type="number" id="guests" name="Total Guests" min="1" value="1" required><br><br>
+    <div class="field">
+        <label class="field-label" for="guests">Number of Guests / अतिथि संख्या</label>
+        <input type="number" id="guests" name="Total Guests" min="1" value="1" style="width:100%; padding:.5rem 0; background:transparent; color:inherit; border:0; border-bottom:1.5px solid var(--gold-line);" required>
+    </div>
 
-    <label for="message">Message / शुभकामना (Optional):</label><br>
-    <textarea id="message" name="Message" rows="4" placeholder="Write a message for the couple..."></textarea><br><br>
+    <div class="field">
+        <label class="field-label" for="message">Message / शुभकामना (Optional)</label>
+        <textarea id="message" name="Message" rows="4" placeholder="Write a message for the couple..."></textarea>
+    </div>
 
-    <button type="submit">Submit RSVP / पठाउनुहोस्</button>
+    <div class="submit-row">
+        <button type="submit" class="btn solid">Submit RSVP / पठाउनुहोस्</button>
+    </div>
 </form>
-
+   
     <div class="result" id="result" hidden>
       <h3 id="res-title"></h3>
       <p id="res-body"></p>
@@ -805,29 +811,9 @@ input[type=text]:focus,textarea:focus{border-bottom-color:var(--gold)}
   form.addEventListener('submit', function(e){
     e.preventDefault();
     clearErrors();
-    var t = T[lang];
-    var name = form.elements.name.value.trim();
-    var attend = form.elements.attend.value;
-    var events = MODE === 'reception' ? ['e2'] : Array.prototype.map.call(form.querySelectorAll('input[name="ev"]:checked'), function(i){ return i.value; });
-    var bad = null;
-    if (!name) { document.getElementById('err-name').textContent = t.errName; bad = bad || 'f-name'; }
-    if (!attend) { document.getElementById('err-attend').textContent = t.errAttend; bad = bad || 'err-attend'; }
-    if (attend === 'yes' && !events.length) { document.getElementById('err-events').textContent = t.errEvents; bad = bad || 'err-events'; }
-    if (bad) {
-      var el = document.getElementById(bad);
-      if (bad === 'f-name') el.focus(); else el.scrollIntoView({ block: 'center' });
-      return;
-    }
-    lastReply = {
-      name: name, attend: attend, guests: guests, events: events,
-      diet: form.elements.diet.value.trim(), note: form.elements.note.value.trim()
-    };
-    renderResult(lastReply);
-    form.hidden = true;
-    var r = document.getElementById('result');
-    r.hidden = false;
-    r.scrollIntoView({ block: 'center' });
-  });
+    form.addEventListener('submit', function (e) {
+  // Web3Forms will handle submission naturally
+});
 
   document.querySelectorAll('.lang button').forEach(function(b){
     b.addEventListener('click', function(){ apply(b.getAttribute('data-lang')); });
