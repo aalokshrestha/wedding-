@@ -367,56 +367,30 @@ input[type=text]:focus,textarea:focus{border-bottom-color:var(--gold)}
     <h2 class="title" data-k="rsvpTitle"></h2>
     <p class="lead" data-k="rsvpLead"></p>
 
-    <form id="rsvp-form" novalidate>
-      <div class="field">
-        <label class="field-label" for="f-name" data-k="fName"></label>
-        <input type="text" id="f-name" name="name" autocomplete="name" maxlength="80">
-        <p class="err" id="err-name" role="alert"></p>
-      </div>
+   <form action="https://api.web3forms.com/submit" method="POST" id="rsvp-form">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="d30a2190-b2c2-499c-9db8-e6640c6f5ea9">
+    
+    <!-- Optional: Redirect to a custom page after submitting -->
+    <!-- <input type="hidden" name="redirect" value="https://aalokshrestha.github.io/wedding-/"> -->
 
-      <fieldset class="field">
-        <legend class="field-label" data-k="fAttend"></legend>
-        <div class="pills">
-          <label class="pill"><input type="radio" name="attend" value="yes"><span data-k="yes"></span></label>
-          <label class="pill"><input type="radio" name="attend" value="no"><span data-k="no"></span></label>
-        </div>
-        <p class="err" id="err-attend" role="alert"></p>
-      </fieldset>
+    <label for="name">Your Name / नाम:</label><br>
+    <input type="text" id="name" name="Guest Name" required placeholder="Enter your full name"><br><br>
 
-      <div id="more" hidden>
-        <div class="field">
-          <span class="field-label" id="guests-label" data-k="fGuests"></span>
-          <div class="stepper" role="group" aria-labelledby="guests-label">
-            <button type="button" id="g-minus" aria-label="−">−</button>
-            <output id="g-val" aria-live="polite">1</output>
-            <button type="button" id="g-plus" aria-label="+">+</button>
-          </div>
-        </div>
+    <label for="attendance">Will you attend? / उपस्थिति:</label><br>
+    <select id="attendance" name="Attendance" required>
+        <option value="Yes">Yes, I will attend / आउनेछु</option>
+        <option value="No">Sorry, I cannot attend / आउन सक्दिन</option>
+    </select><br><br>
 
-        <fieldset class="field only-both">
-          <legend class="field-label" data-k="fEvents"></legend>
-          <div class="pills">
-            <label class="pill only-both"><input type="checkbox" name="ev" value="e1"><span data-k="ev1"></span></label>
-            <label class="pill"><input type="checkbox" name="ev" value="e2"><span data-k="ev2"></span></label>
-          </div>
-          <p class="err" id="err-events" role="alert"></p>
-        </fieldset>
+    <label for="guests">Number of Guests / अतिथि संख्या:</label><br>
+    <input type="number" id="guests" name="Total Guests" min="1" value="1" required><br><br>
 
-        <div class="field">
-          <label class="field-label" for="f-diet" data-k="fDiet"></label>
-          <input type="text" id="f-diet" name="diet" maxlength="120">
-        </div>
-      </div>
+    <label for="message">Message / शुभकामना (Optional):</label><br>
+    <textarea id="message" name="Message" rows="4" placeholder="Write a message for the couple..."></textarea><br><br>
 
-      <div class="field">
-        <label class="field-label" for="f-note" data-k="fNote"></label>
-        <textarea id="f-note" name="note" maxlength="400"></textarea>
-      </div>
-
-      <div class="submit-row">
-        <button class="btn solid" type="submit" data-k="submit"></button>
-      </div>
-    </form>
+    <button type="submit">Submit RSVP / पठाउनुहोस्</button>
+</form>
 
     <div class="result" id="result" hidden>
       <h3 id="res-title"></h3>
