@@ -1,0 +1,987 @@
+<!doctype html>
+<html lang="ne">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#651130">
+<title>Aalok &amp; Pratima – Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Mukta:wght@300;400;500&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<style>
+:root{
+  --b900:#3a0816;
+  --b800:#4f0b21;
+  --b700:#651130;
+  --gold:#c9a24b;
+  --gold-light:#e8d29a;
+  --gold-line:rgba(201,162,75,.45);
+  --ivory:#f7eedd;
+  --paper:#f5ecdc;
+  --paper-ink:#4a0d22;
+  --paper-muted:#6f4a55;
+  --paper-line:rgba(101,17,48,.25);
+  --gold-ink:#7a5c16;
+  --err:#ffd0c7;
+  --display:'Cormorant Garamond','Tiro Devanagari Hindi','Noto Serif Devanagari',Georgia,serif;
+  --body:'Mukta','Noto Sans Devanagari',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --b900:#24050e; --b800:#320712; --b700:#420a1c;
+    --paper:#2a0612; --paper-ink:#f3e6cc; --paper-muted:#cdb8a0;
+    --paper-line:rgba(201,162,75,.3); --gold-ink:#dcbf72;
+  }
+}
+:root[data-theme="dark"]{
+  --b900:#24050e; --b800:#320712; --b700:#420a1c;
+  --paper:#2a0612; --paper-ink:#f3e6cc; --paper-muted:#cdb8a0;
+  --paper-line:rgba(201,162,75,.3); --gold-ink:#dcbf72;
+}
+
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+html{-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){ html{scroll-behavior:smooth} }
+body{
+  margin:0;background:var(--b900);color:var(--ivory);
+  font-family:var(--body);font-size:1.0625rem;line-height:1.75;font-synthesis:none;
+}
+button,input,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+h1,h2,h3,p{margin:0}
+
+.wrap{max-width:1040px;margin:0 auto}
+.sec{padding:clamp(4rem,9vw,7rem) 1.4rem;scroll-margin-top:3.2rem}
+.on-b800{background:var(--b800)}
+.on-b700{background:var(--b700)}
+.on-paper{background:var(--paper);color:var(--paper-ink)}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:var(--b900);border-bottom:1px solid var(--gold-line)}
+.nav-in{max-width:1040px;margin:0 auto;padding:.45rem 1.2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{font-family:var(--display);font-size:1.3rem;font-weight:600;color:var(--gold-light);text-decoration:none;white-space:nowrap}
+.links{display:flex;gap:clamp(.8rem,3vw,1.6rem);margin-left:auto}
+.links a{color:var(--gold-light);text-decoration:none;font-size:.95rem;padding:.25rem 0}
+.links a:hover{color:var(--ivory)}
+.lang{display:inline-flex;border:1px solid var(--gold-line);border-radius:999px;padding:2px}
+.lang button{border:0;background:transparent;cursor:pointer;padding:0 .8rem;border-radius:999px;font-size:.88rem;line-height:1.8;color:var(--ivory)}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--b900)}
+@media (max-width:640px){ .brand{display:none} }
+
+/* hero */
+.hero{background:var(--b700);display:grid;place-items:center;padding:3.2rem 1.2rem 4.2rem}
+.arch{position:relative;width:min(92vw,420px);aspect-ratio:300/430}
+.arch svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.arch .line{fill:none;stroke:var(--gold);stroke-width:1.4;stroke-dasharray:1;animation:draw 2.4s ease-in-out backwards}
+.arch .line.inner{stroke-width:.7;animation-delay:.5s}
+@keyframes draw{from{stroke-dashoffset:1}}
+.arch-content{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:24% 10% 8%;text-align:center;animation:rise 1.2s ease 1.5s backwards;
+}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@media (prefers-reduced-motion:reduce){ .arch .line,.arch-content{animation:none} }
+.ganesh{color:var(--gold-light);font-size:clamp(.8rem,2.8vw,.98rem);line-height:1.6}
+.shubh{margin-top:.6rem;font-family:var(--display);font-style:italic;font-weight:500;color:var(--gold);font-size:clamp(1.3rem,5.4vw,1.75rem);line-height:1.5}
+.names{display:flex;flex-direction:column;align-items:center;margin-top:.2rem;line-height:1.15}
+.names .n{font-family:var(--display);font-weight:600;font-size:clamp(2.5rem,12vw,4rem)}
+.names .amp{font-family:var(--display);font-style:italic;color:var(--gold);font-size:clamp(1.2rem,5vw,1.6rem);line-height:1.5}
+.hero-rule{width:64px;height:1px;background:var(--gold);margin:1.1rem 0 .7rem}
+.hero-date{font-family:var(--display);font-weight:600;font-size:clamp(1.3rem,5.4vw,1.7rem);line-height:1.3}
+.hero-sub{margin-top:.1rem;font-size:clamp(.85rem,3vw,.98rem);color:var(--gold-light)}
+
+/* countdown */
+.count-band{background:var(--b900);padding:3rem 1.2rem;text-align:center;border-top:1px solid var(--gold-line);border-bottom:1px solid var(--gold-line)}
+.count-band h2{font-family:var(--display);font-style:italic;font-weight:500;font-size:1.6rem;color:var(--gold-light)}
+.count{display:flex;justify-content:center;margin-top:1.4rem}
+.unit{padding:0 clamp(.7rem,4.5vw,2.4rem);border-left:1px solid var(--gold-line)}
+.unit:first-child{border-left:0}
+.unit .num{display:block;font-family:var(--display);font-weight:600;font-size:clamp(2.3rem,10vw,4.4rem);line-height:1.1;color:var(--gold-light);font-variant-numeric:tabular-nums}
+.unit .lbl{display:block;font-size:.92rem;opacity:.85}
+.count-msg{margin-top:1.2rem;font-family:var(--display);font-size:1.9rem;color:var(--gold-light)}
+
+/* section titles */
+.rule{display:flex;align-items:center;gap:.8rem;color:var(--gold);margin:0 auto 1rem;max-width:220px}
+.on-paper .rule{color:var(--gold-ink)}
+.rule::before,.rule::after{content:"";height:1px;background:currentColor;flex:1}
+.rule i{width:8px;height:8px;transform:rotate(45deg);border:1.5px solid currentColor}
+.title{font-family:var(--display);font-weight:500;font-size:clamp(2.2rem,6vw,3rem);line-height:1.2;text-align:center;color:var(--gold-light)}
+.on-paper .title{color:var(--paper-ink)}
+
+/* invitation */
+.invite-text{max-width:36rem;margin:1.6rem auto 0;text-align:center;font-size:1.12rem;line-height:1.95}
+.invite-text b{font-family:var(--display);font-weight:600;font-size:1.3em;color:var(--gold-ink)}
+.hosts{margin-top:2.4rem;text-align:center}
+.hosts .small{font-size:.95rem;color:var(--paper-muted)}
+.hosts .who{font-family:var(--display);font-weight:600;font-size:1.5rem;line-height:1.5}
+.hosts .fam{margin-top:1.4rem}
+
+/* schedule */
+.events{max-width:760px;margin:2.6rem auto 0}
+.event{display:grid;grid-template-columns:clamp(5.2rem,20vw,8rem) 1fr;gap:clamp(1rem,4vw,2.6rem);padding:2rem 0;border-top:1px solid var(--gold-line)}
+.event:last-child{border-bottom:1px solid var(--gold-line)}
+.date .d{display:block;font-family:var(--display);font-weight:600;font-size:clamp(3.2rem,11vw,5rem);line-height:1;color:var(--gold)}
+.date .m{display:block;margin-top:.3rem;font-size:1rem;line-height:1.5}
+.info h3{font-family:var(--display);font-weight:600;font-size:1.9rem;line-height:1.3;color:var(--gold-light)}
+.info p{margin-top:.1rem}
+.info .when{color:var(--gold-light);font-size:.98rem}
+.actions{display:flex;flex-wrap:wrap;gap:.3rem 1.5rem;margin-top:.9rem}
+.actions a{color:var(--gold-light);text-underline-offset:4px}
+
+/* buttons */
+.btn{display:inline-block;padding:.6rem 1.6rem;border-radius:999px;border:1.5px solid var(--gold);text-decoration:none;font-weight:500;cursor:pointer;background:transparent;color:var(--gold-light);line-height:1.6}
+.btn.solid{background:var(--gold);color:var(--b900)}
+.btn:hover{background:var(--gold-light);color:var(--b900);border-color:var(--gold-light)}
+
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1.15fr;gap:2rem;margin-top:2.6rem}
+@media (max-width:760px){ .loc{grid-template-columns:1fr} }
+.tabs{display:grid;gap:.9rem;align-content:start}
+.tab{
+  text-align:left;background:transparent;color:var(--paper-ink);cursor:pointer;
+  border:1px solid var(--paper-line);padding:1.1rem 1.3rem;line-height:1.5;
+}
+.tab .tn{display:block;font-family:var(--display);font-weight:600;font-size:1.4rem;line-height:1.35}
+.tab .te{display:block;font-size:.95rem;color:var(--paper-muted)}
+.tab[aria-pressed="true"]{background:var(--b700);border-color:var(--b700);color:var(--ivory)}
+.tab[aria-pressed="true"] .te{color:var(--gold-light)}
+.panel{
+  position:relative;overflow:hidden;background:var(--b700);color:var(--ivory);
+  border:1px solid var(--gold);padding:2.4rem 1.6rem 2rem;text-align:center;min-height:19rem;
+}
+.rings{position:absolute;inset:0;width:100%;height:100%;color:var(--gold);opacity:.3;pointer-events:none}
+.panel-in{position:relative}
+.pin{width:46px;height:46px;color:var(--gold)}
+.panel h3{margin-top:.6rem;font-family:var(--display);font-weight:600;font-size:1.8rem;line-height:1.3}
+.panel .when{margin-top:.2rem;color:var(--gold-light)}
+.panel .btns{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.5rem}
+
+/* rsvp */
+.rsvp-wrap{max-width:600px;margin:0 auto}
+.lead{margin-top:1.2rem;text-align:center;color:var(--gold-light)}
+form{margin-top:2rem}
+.field{border:0;padding:0;margin:1.8rem 0 0;min-width:0}
+.field-label{display:block;padding:0;margin-bottom:.5rem;color:var(--gold-light);font-size:1rem}
+input[type=text],textarea{width:100%;background:transparent;border:0;border-bottom:1.5px solid var(--gold-line);padding:.5rem 0;border-radius:0}
+textarea{resize:vertical;min-height:4.5rem}
+input[type=text]:focus,textarea:focus{border-bottom-color:var(--gold)}
+.pills{display:flex;flex-wrap:wrap;gap:.6rem}
+.pill{position:relative;display:inline-block}
+.pill input{position:absolute;opacity:0;width:100%;height:100%;inset:0;margin:0;cursor:pointer}
+.pill span{display:inline-block;padding:.4rem 1.2rem;border:1.5px solid var(--gold-line);border-radius:999px;line-height:1.6}
+.pill input:checked + span{background:var(--gold);border-color:var(--gold);color:var(--b900)}
+.pill input:focus-visible + span{outline:2px solid var(--gold-light);outline-offset:3px}
+.stepper{display:inline-flex;align-items:center;border:1.5px solid var(--gold-line);border-radius:999px}
+.stepper button{width:2.8rem;height:2.6rem;border:0;background:transparent;cursor:pointer;font-size:1.4rem;line-height:1;color:var(--gold-light);border-radius:999px}
+.stepper button:hover{background:rgba(201,162,75,.18)}
+.stepper output{min-width:2.4rem;text-align:center;font-family:var(--display);font-weight:600;font-size:1.5rem}
+.err{margin-top:.4rem;color:var(--err);font-size:.95rem;min-height:0}
+.submit-row{margin-top:2.2rem;text-align:center}
+.submit-row .btn{padding:.7rem 2.4rem;font-size:1.05rem}
+.result{margin-top:2rem;border:1px solid var(--gold-line);padding:2rem 1.5rem;text-align:center}
+.result h3{font-family:var(--display);font-weight:600;font-size:1.9rem;color:var(--gold-light);line-height:1.3}
+.result p{margin-top:.6rem}
+.result .btns{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.4rem}
+.status{margin-top:.8rem;min-height:1.6rem;color:var(--gold-light);font-size:.95rem}
+
+/* host planner (only the couple sees this) */
+.plan{max-width:680px}
+.plan-lead{margin-top:1.2rem;text-align:center;color:var(--paper-muted)}
+.plan-field{margin-top:1.8rem}
+.plan-label{display:block;margin-bottom:.4rem;color:var(--paper-ink)}
+.plan-help{margin-top:1.2rem;font-size:.95rem;color:var(--paper-muted)}
+.plan input[type=text],.plan textarea{border-bottom-color:var(--paper-line)}
+.plan input[type=text]:focus,.plan textarea:focus{border-bottom-color:var(--gold-ink)}
+.plan .pill span{border-color:var(--paper-line)}
+.plan .pill input:checked + span{background:var(--b700);border-color:var(--b700);color:var(--ivory)}
+.plan .btn{color:var(--paper-ink);border-color:var(--paper-ink)}
+.plan .btn.solid{background:var(--b700);border-color:var(--b700);color:var(--ivory)}
+.plan .btn:hover{background:var(--gold);border-color:var(--gold);color:var(--b900)}
+.plan .add-row{display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center;margin-top:1rem}
+.sum{margin-top:2.2rem;display:flex;flex-wrap:wrap;gap:.2rem 2rem;font-family:var(--display);font-weight:600;font-size:1.4rem;line-height:1.5}
+.empty{margin-top:1.6rem;color:var(--paper-muted)}
+.guests{margin-top:1rem;border-top:1px solid var(--paper-line)}
+.guest{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;align-items:center;padding:1rem 0;border-bottom:1px solid var(--paper-line)}
+.guest .gn{font-family:var(--display);font-weight:600;font-size:1.4rem;line-height:1.3;overflow-wrap:anywhere}
+.guest .gn.sent{opacity:.55}
+.g-tier{display:inline-flex;border:1.5px solid var(--paper-line);border-radius:999px;padding:2px}
+.g-tier button{border:0;background:transparent;cursor:pointer;padding:0 .8rem;border-radius:999px;font-size:.9rem;line-height:1.8;color:var(--paper-ink)}
+.g-tier button[aria-pressed="true"]{background:var(--b700);color:var(--ivory)}
+.g-acts{grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:.2rem 1.4rem;align-items:center}
+.lnk{background:none;border:0;padding:0;cursor:pointer;color:var(--paper-ink);text-decoration:underline;text-underline-offset:4px;font-size:.98rem}
+.sent-lbl{display:inline-flex;align-items:center;gap:.4rem;font-size:.98rem;cursor:pointer}
+.sent-lbl input{width:1.05rem;height:1.05rem;accent-color:var(--b700)}
+.status-plan{margin-top:.8rem;min-height:1.6rem;font-size:.95rem;color:var(--gold-ink)}
+
+/* footer */
+.foot{background:var(--b900);padding:3rem 1.4rem 3.4rem;text-align:center;border-top:1px solid var(--gold-line)}
+.foot .fn{font-family:var(--display);font-weight:600;font-size:2rem;color:var(--gold-light);line-height:1.4}
+.foot p{margin-top:.5rem;font-size:.98rem;opacity:.9}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Sections">
+  <div class="nav-in">
+    <a class="brand" href="#top" data-k="brand"></a>
+    <div class="links">
+      <a href="#schedule" data-k="navSched"></a>
+      <a href="#location" data-k="navLoc"></a>
+      <a href="#rsvp" data-k="navRsvp"></a>
+      <a href="#guest-list" id="nav-host" data-k="navHost" hidden></a>
+    </div>
+    <div class="lang" role="group" aria-label="Language / भाषा">
+      <button type="button" data-lang="ne" aria-pressed="true">नेपाली</button>
+      <button type="button" data-lang="en" aria-pressed="false">English</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="arch">
+    <svg viewBox="0 0 300 430" aria-hidden="true">
+      <path class="line" pathLength="1" d="M10 430 V150 A140 140 0 0 1 290 150 V430"/>
+      <path class="line inner" pathLength="1" d="M22 430 V150 A128 128 0 0 1 278 150 V430"/>
+      <path d="M150 2 L157 10 L150 18 L143 10Z" fill="#c9a24b"/>
+    </svg>
+    <div class="arch-content">
+      <p class="ganesh" data-k="ganesh"></p>
+      <h1 class="shubh" data-k="shubh"></h1>
+      <p class="names">
+        <span class="n" data-k="nameA"></span>
+        <span class="amp" data-k="amp"></span>
+        <span class="n" data-k="nameB"></span>
+      </p>
+      <span class="hero-rule" aria-hidden="true"></span>
+      <p class="hero-date" data-k="heroDate"></p>
+      <p class="hero-sub" data-k="heroSub"></p>
+    </div>
+  </div>
+</header>
+
+<section class="count-band" aria-labelledby="count-title">
+  <h2 id="count-title" data-k="countTitle"></h2>
+  <div class="count" id="count" role="timer">
+    <div class="unit"><span class="num" id="cd-d">0</span><span class="lbl" data-k="uDays"></span></div>
+    <div class="unit"><span class="num" id="cd-h">0</span><span class="lbl" data-k="uHours"></span></div>
+    <div class="unit"><span class="num" id="cd-m">0</span><span class="lbl" data-k="uMins"></span></div>
+    <div class="unit"><span class="num" id="cd-s">0</span><span class="lbl" data-k="uSecs"></span></div>
+  </div>
+  <p class="count-msg" id="count-msg" hidden></p>
+</section>
+
+<section class="sec on-paper" id="invitation">
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <h2 class="title" data-k="inviteTitle"></h2>
+    <p class="invite-text" data-k="intro"></p>
+    <div class="hosts">
+      <p class="small" data-k="hostLabel"></p>
+      <p class="who" data-k="host1"></p>
+      <p class="who" data-k="host2"></p>
+      <div class="fam">
+        <p class="small" data-k="famLabel"></p>
+        <p class="who" data-k="fam"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-b800" id="schedule">
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <h2 class="title" data-k="schedTitle"></h2>
+    <div class="events">
+      <article class="event only-both">
+        <div class="date"><span class="d" data-k="e1n"></span><span class="m" data-k="e1m"></span></div>
+        <div class="info">
+          <h3 data-k="e1t"></h3>
+          <p class="when" data-k="e1g"></p>
+          <p data-k="time"></p>
+          <p data-k="v1n"></p>
+          <div class="actions">
+            <a href="#location" data-venue="0" data-k="seeMap"></a>
+            <a id="cal1" target="_blank" rel="noopener" data-k="cal"></a>
+          </div>
+        </div>
+      </article>
+      <article class="event">
+        <div class="date"><span class="d" data-k="e2n"></span><span class="m" data-k="e2m"></span></div>
+        <div class="info">
+          <h3 data-k="e2t"></h3>
+          <p class="when" data-k="e2g"></p>
+          <p data-k="time"></p>
+          <p data-k="v2n"></p>
+          <div class="actions">
+            <a href="#location" data-venue="1" data-k="seeMap"></a>
+            <a id="cal2" target="_blank" rel="noopener" data-k="cal"></a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-paper" id="location">
+  <div class="wrap">
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <h2 class="title" data-k="locTitle"></h2>
+    <div class="loc">
+      <div class="tabs" role="group" aria-label="Venues">
+        <button type="button" class="tab only-both" data-venue="0" aria-pressed="true">
+          <span class="tn" data-k="v1n"></span><span class="te" data-k="e1t"></span>
+        </button>
+        <button type="button" class="tab" data-venue="1" aria-pressed="false">
+          <span class="tn" data-k="v2n"></span><span class="te" data-k="e2t"></span>
+        </button>
+      </div>
+      <div class="panel" aria-live="polite">
+        <svg class="rings" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <g fill="none" stroke="currentColor" stroke-width="1">
+            <circle cx="200" cy="80" r="50"/><circle cx="200" cy="80" r="100"/>
+            <circle cx="200" cy="80" r="150"/><circle cx="200" cy="80" r="200"/>
+            <circle cx="200" cy="80" r="250"/>
+          </g>
+        </svg>
+        <div class="panel-in">
+          <svg class="pin" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7z" fill="currentColor"/>
+            <circle cx="12" cy="9" r="2.6" fill="#651130"/>
+          </svg>
+          <h3 id="pv-name"></h3>
+          <p class="when" id="pv-when"></p>
+          <div class="btns">
+            <a class="btn solid" id="map-open" target="_blank" rel="noopener" data-k="openMap"></a>
+            <a class="btn" id="map-dir" target="_blank" rel="noopener" data-k="getDir"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-b700" id="rsvp">
+  <div class="rsvp-wrap">
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <h2 class="title" data-k="rsvpTitle"></h2>
+    <p class="lead" data-k="rsvpLead"></p>
+
+    <form id="rsvp-form" novalidate>
+      <div class="field">
+        <label class="field-label" for="f-name" data-k="fName"></label>
+        <input type="text" id="f-name" name="name" autocomplete="name" maxlength="80">
+        <p class="err" id="err-name" role="alert"></p>
+      </div>
+
+      <fieldset class="field">
+        <legend class="field-label" data-k="fAttend"></legend>
+        <div class="pills">
+          <label class="pill"><input type="radio" name="attend" value="yes"><span data-k="yes"></span></label>
+          <label class="pill"><input type="radio" name="attend" value="no"><span data-k="no"></span></label>
+        </div>
+        <p class="err" id="err-attend" role="alert"></p>
+      </fieldset>
+
+      <div id="more" hidden>
+        <div class="field">
+          <span class="field-label" id="guests-label" data-k="fGuests"></span>
+          <div class="stepper" role="group" aria-labelledby="guests-label">
+            <button type="button" id="g-minus" aria-label="−">−</button>
+            <output id="g-val" aria-live="polite">1</output>
+            <button type="button" id="g-plus" aria-label="+">+</button>
+          </div>
+        </div>
+
+        <fieldset class="field only-both">
+          <legend class="field-label" data-k="fEvents"></legend>
+          <div class="pills">
+            <label class="pill only-both"><input type="checkbox" name="ev" value="e1"><span data-k="ev1"></span></label>
+            <label class="pill"><input type="checkbox" name="ev" value="e2"><span data-k="ev2"></span></label>
+          </div>
+          <p class="err" id="err-events" role="alert"></p>
+        </fieldset>
+
+        <div class="field">
+          <label class="field-label" for="f-diet" data-k="fDiet"></label>
+          <input type="text" id="f-diet" name="diet" maxlength="120">
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="f-note" data-k="fNote"></label>
+        <textarea id="f-note" name="note" maxlength="400"></textarea>
+      </div>
+
+      <div class="submit-row">
+        <button class="btn solid" type="submit" data-k="submit"></button>
+      </div>
+    </form>
+
+    <div class="result" id="result" hidden>
+      <h3 id="res-title"></h3>
+      <p id="res-body"></p>
+      <div class="btns" id="res-btns"></div>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec on-paper" id="guest-list" hidden>
+  <div class="wrap plan">
+    <div class="rule" aria-hidden="true"><i></i></div>
+    <h2 class="title" data-k="hostTitle"></h2>
+    <p class="plan-lead" data-k="hostLead"></p>
+
+    <div class="plan-field">
+      <label class="plan-label" for="lk-both" data-k="lkBoth"></label>
+      <input type="text" id="lk-both" inputmode="url" autocomplete="off">
+    </div>
+    <div class="plan-field">
+      <label class="plan-label" for="lk-rec" data-k="lkRec"></label>
+      <input type="text" id="lk-rec" inputmode="url" autocomplete="off">
+    </div>
+    <p class="plan-help" data-k="lkHelp"></p>
+
+    <div class="plan-field">
+      <label class="plan-label" for="add-names" data-k="addNames"></label>
+      <textarea id="add-names"></textarea>
+      <div class="add-row">
+        <div class="pills">
+          <label class="pill"><input type="radio" name="addtier" value="rec" checked><span data-k="tRec"></span></label>
+          <label class="pill"><input type="radio" name="addtier" value="both"><span data-k="tBoth"></span></label>
+        </div>
+        <button type="button" class="btn solid" id="add-btn" data-k="addBtn"></button>
+      </div>
+    </div>
+
+    <div class="sum" id="g-sum"></div>
+    <p class="empty" id="g-empty" data-k="empty"></p>
+    <div class="guests" id="guest-rows"></div>
+    <p class="status-plan" id="plan-status" role="status" aria-live="polite"></p>
+  </div>
+</section>
+
+<footer class="foot">
+  <p class="fn" data-k="brand"></p>
+  <p data-k="footLine"></p>
+</footer>
+
+<script>
+(function(){
+  /* ---------- Editable settings ---------- */
+  var CONFIG = {
+    mode: 'both',                                /* 'both' = wedding + reception card, 'reception' = reception-only card */
+    weddingStart:   '2026-10-11T00:00:00+05:45', /* wedding day, Nepal time */
+    receptionStart: '2026-10-12T00:00:00+05:45', /* reception day, Nepal time */
+    weddingEnd:   '2026-10-13T00:00:00+05:45',   /* after the reception */
+    rsvpWhatsApp: '',                            /* e.g. '9779812345678' (country code + number, digits only) */
+    rsvpEmail:    '',                            /* e.g. 'name@example.com' */
+    links: {                                     /* share links of the two cards, used by the guest list */
+      both: 'https://claude.ai/artifact/Rr3CS81wfa55kEZ2XcA6x7',
+      reception: 'https://claude.ai/artifact/TDyuaucjwct1yqkgiym6ML'
+    },
+    venues: [
+      { query: 'Sampada Garden Hotel, Kathmandu, Nepal' },
+      { query: 'Lord Palace Banquet, Kathmandu, Nepal' }
+    ]
+  };
+
+  var nd = function(s){ return String(s).replace(/\d/g, function(d){ return '०१२३४५६७८९'[d]; }); };
+
+  var T = {
+    ne:{
+      brand:'आलोक र प्रतिमा',
+      navSched:'कार्यक्रम', navLoc:'स्थान', navRsvp:'उपस्थिति',
+      ganesh:'॥ श्री गणेशाय नमः ॥',
+      shubh:'शुभविवाह',
+      nameA:'आलोक', amp:'र', nameB:'प्रतिमा',
+      heroDate:'११ अक्टोबर २०२६', heroSub:'आइतवार, असोज २५, २०८३',
+      countTitle:'शुभ दिनसम्म बाँकी समय',
+      uDays:'दिन', uHours:'घण्टा', uMins:'मिनेट', uSecs:'सेकेन्ड',
+      today:'आज शुभविवाहको दिन !',
+      past:'हाम्रो खुसीमा सहभागी हुनुभएकोमा धन्यवाद',
+      inviteTitle:'निमन्त्रणा',
+      intro:'हाम्रो आयुष्मान सुपुत्र श्री <b>आलोक श्रेष्ठ</b>को, बुटवल उपमहानगरपालिका–११, देवीनगर निवासी श्री प्रदिप कुमार श्रेष्ठ तथा श्रीमती सीता कोइरालाकी आयुष्मती सुपुत्री सुश्री <b>प्रतिमा श्रेष्ठ</b>का साथ सुसम्पन्न हुने शुभविवाहको वैवाहिक कार्यक्रममा उपस्थित भई वर–वधूलाई शुभ आशीर्वाद प्रदान गरिदिनु हुन यहाँहरूको गरिमामय उपस्थितिका लागि सादर निमन्त्रणा गर्दछौं।',
+      hostLabel:'प्रार्थी',
+      host1:'श्रीमान् कुबेर लाल श्रेष्ठ',
+      host2:'श्रीमती लक्ष्मी श्रेष्ठ (बोगटी)',
+      famLabel:'दर्शनाभिलाषी',
+      fam:'सम्पूर्ण श्रेष्ठ परिवार',
+      schedTitle:'कार्यक्रम तालिका',
+      e1n:'२५', e1m:'असोज २०८३', e1t:'जन्ती प्रस्थान', e1g:'आइतवार, ११ अक्टोबर २०२६',
+      e2n:'२६', e2m:'असोज २०८३', e2t:'प्रीतिभोज',    e2g:'सोमवार, १२ अक्टोबर २०२६',
+      time:'बिहान',
+      v1n:'सम्पदा गार्डेन होटल प्रा. लि.',
+      v2n:'लर्ड प्यालेस ब्याङ्क्वेट, काठमाडौं',
+      seeMap:'नक्सामा हेर्नुहोस्',
+      cal:'क्यालेन्डरमा थप्नुहोस्',
+      calT1:'आलोक र प्रतिमाको शुभविवाह – जन्ती प्रस्थान',
+      calT2:'आलोक र प्रतिमाको शुभविवाह – प्रीतिभोज',
+      locTitle:'कार्यक्रम स्थल',
+      openMap:'गुगल म्यापमा खोल्नुहोस्',
+      getDir:'बाटो देखाउनुहोस्',
+      rsvpTitle:'उपस्थिति जनाउनुहोस्',
+      rsvpLead:'तपाईंको उपस्थितिले हाम्रो खुसी दोब्बर हुनेछ। कृपया आउन सक्ने/नसक्ने जानकारी दिनुहोस्।',
+      fName:'तपाईंको नाम',
+      fAttend:'के तपाईं आउन सक्नुहुन्छ?',
+      yes:'खुसीसाथ आउँछु', no:'असमर्थ छु',
+      fGuests:'कति जना आउनुहुन्छ (तपाईं सहित)',
+      fEvents:'कुन कार्यक्रममा आउनुहुन्छ?',
+      ev1:'जन्ती प्रस्थान, ११ अक्टोबर', ev2:'प्रीतिभोज, १२ अक्टोबर',
+      fDiet:'खानपानसम्बन्धी आवश्यकता (ऐच्छिक)',
+      fNote:'वर–वधूलाई सन्देश (ऐच्छिक)',
+      submit:'उपस्थिति पठाउनुहोस्',
+      errName:'कृपया आफ्नो नाम लेख्नुहोस्।',
+      errAttend:'कृपया एउटा उत्तर छान्नुहोस्।',
+      errEvents:'कम्तीमा एउटा कार्यक्रम छान्नुहोस्।',
+      resYes:function(n){ return 'धन्यवाद, ' + n + ' !'; },
+      resNo:function(n){ return 'जानकारी दिनुभएकोमा धन्यवाद, ' + n + '।'; },
+      resBodySend:'अन्तिम चरण: तलको बटन थिचेर आफ्नो जवाफ परिवारलाई पठाउनुहोस्।',
+      resBodyShare:'तलको बटनबाट आफ्नो जवाफ परिवारलाई पठाउनुहोस्।',
+      sendWA:'WhatsApp मा पठाउनुहोस्',
+      sendMail:'इमेलबाट पठाउनुहोस्',
+      shareReply:'जवाफ सेयर गर्नुहोस्',
+      copyReply:'जवाफ कपी गर्नुहोस्',
+      editReply:'जवाफ सच्याउनुहोस्',
+      copied:'जवाफ कपी भयो',
+      msgHead:'आलोक र प्रतिमाको शुभविवाहबारे उपस्थितिको जवाफ',
+      msgName:'नाम', msgReply:'जवाफ', msgGuests:'सहभागी संख्या', msgEvents:'कार्यक्रम', msgDiet:'खानपान', msgNote:'सन्देश',
+      mailSubject:'शुभविवाह उपस्थिति – ',
+      footLine:'११–१२ अक्टोबर २०२६, काठमाडौं',
+      gMinus:'सहभागी संख्या घटाउनुहोस्', gPlus:'सहभागी संख्या बढाउनुहोस्',
+      navHost:'अतिथि सूची',
+      hostTitle:'निमन्त्रणा सूची',
+      hostLead:'को-कोलाई कुन कार्यक्रममा बोलाउने भन्ने यहाँ छान्नुहोस्। हरेक अतिथिलाई सही कार्डको लिङ्कसहित सन्देश पठाउन सकिन्छ। यो भाग अतिथिहरूले देख्दैनन्।',
+      lkBoth:'कार्डको लिङ्क: शुभविवाह र प्रीतिभोज',
+      lkRec:'कार्डको लिङ्क: प्रीतिभोज मात्र',
+      lkHelp:'हरेक कार्ड शेयर गरेपछि आएको लिङ्क यहाँ टाँस्नुहोस्।',
+      addNames:'अतिथिको नाम (एक लाइनमा एक जना)',
+      tBoth:'शुभविवाह र प्रीतिभोज', tRec:'प्रीतिभोज मात्र',
+      addBtn:'सूचीमा थप्नुहोस्',
+      gWA:'WhatsApp मा पठाउनुहोस्', gCopy:'सन्देश कपी गर्नुहोस्', gSent:'पठाइयो', gDel:'हटाउनुहोस्',
+      empty:'अझै कोही थपिएको छैन। माथि नाम लेखेर थप्नुहोस्।',
+      sumWed:function(n){ return 'शुभविवाह: ' + nd(n) + ' जना'; },
+      sumRec:function(n){ return 'प्रीतिभोज: ' + nd(n) + ' जना'; },
+      noLink:'सन्देशमा कार्डको लिङ्क छैन। माथि लिङ्क टाँस्नुहोस्।',
+      msgCopied:'सन्देश कपी भयो',
+      inviteBoth:function(n, l){ return 'प्रिय ' + n + ',\nहाम्रो शुभविवाह (११ अक्टोबर) र प्रीतिभोज (१२ अक्टोबर) मा तपाईंलाई हार्दिक निमन्त्रणा गर्दछौं।' + (l ? '\n' + l : '') + '\n– आलोक र प्रतिमा'; },
+      inviteRec:function(n, l){ return 'प्रिय ' + n + ',\nहाम्रो शुभविवाहको प्रीतिभोज (१२ अक्टोबर) मा तपाईंलाई हार्दिक निमन्त्रणा गर्दछौं।' + (l ? '\n' + l : '') + '\n– आलोक र प्रतिमा'; },
+      rec:{
+        shubh:'प्रीतिभोज',
+        heroDate:'१२ अक्टोबर २०२६', heroSub:'सोमवार, असोज २६, २०८३',
+        countTitle:'प्रीतिभोजसम्म बाँकी समय',
+        today:'आज प्रीतिभोजको दिन !',
+        intro:'हाम्रो आयुष्मान सुपुत्र श्री <b>आलोक श्रेष्ठ</b>को, बुटवल उपमहानगरपालिका–११, देवीनगर निवासी श्री प्रदिप कुमार श्रेष्ठ तथा श्रीमती सीता कोइरालाकी आयुष्मती सुपुत्री सुश्री <b>प्रतिमा श्रेष्ठ</b>का साथ सुसम्पन्न हुने शुभविवाहको उपलक्ष्यमा आयोजना गरिने प्रीतिभोजमा उपस्थित भई वर–वधूलाई शुभ आशीर्वाद प्रदान गरिदिनु हुन यहाँहरूको गरिमामय उपस्थितिका लागि सादर निमन्त्रणा गर्दछौं।'
+      }
+    },
+    en:{
+      brand:'Aalok & Pratima',
+      navSched:'Schedule', navLoc:'Location', navRsvp:'RSVP',
+      ganesh:'॥ Shree Ganeshaya Namah ॥',
+      shubh:'Shubha Vivah',
+      nameA:'Aalok', amp:'&amp;', nameB:'Pratima',
+      heroDate:'11 October 2026', heroSub:'Sunday, 25 Ashoj 2083',
+      countTitle:'Until the wedding day',
+      uDays:'Days', uHours:'Hours', uMins:'Minutes', uSecs:'Seconds',
+      today:'Today is the wedding day!',
+      past:'Thank you for celebrating with us',
+      inviteTitle:'Invitation',
+      intro:'We warmly invite you to the wedding of our beloved son <b>Aalok Shrestha</b> with <b>Pratima Shrestha</b>, beloved daughter of Mr. Pradip Kumar Shrestha and Mrs. Sita Koirala of Devinagar, Butwal-11. Please join us and bless the couple with your gracious presence.',
+      hostLabel:'Invited by',
+      host1:'Mr. Kuber Lal Shrestha',
+      host2:'Mrs. Laxmi Shrestha (Bogati)',
+      famLabel:'Eagerly awaiting you',
+      fam:'The entire Shrestha family',
+      schedTitle:'Schedule',
+      e1n:'25', e1m:'Ashoj 2083', e1t:'Janti Departure', e1g:'Sunday, 11 October 2026',
+      e2n:'26', e2m:'Ashoj 2083', e2t:'Reception (Pritibhoj)', e2g:'Monday, 12 October 2026',
+      time:'Morning',
+      v1n:'Sampada Garden Hotel Pvt. Ltd.',
+      v2n:'Lord Palace Banquet, Kathmandu',
+      seeMap:'See on map',
+      cal:'Add to calendar',
+      calT1:'Aalok & Pratima’s Wedding – Janti Departure',
+      calT2:'Aalok & Pratima’s Wedding – Reception',
+      locTitle:'Location',
+      openMap:'Open in Google Maps',
+      getDir:'Get directions',
+      rsvpTitle:'RSVP',
+      rsvpLead:'Your presence will make our day. Please let us know whether you can join us.',
+      fName:'Your name',
+      fAttend:'Will you be joining us?',
+      yes:'Joyfully accept', no:'Regretfully decline',
+      fGuests:'Number of guests (including you)',
+      fEvents:'Which events will you attend?',
+      ev1:'Janti Departure, 11 Oct', ev2:'Reception, 12 Oct',
+      fDiet:'Dietary needs (optional)',
+      fNote:'A note for the couple (optional)',
+      submit:'Send RSVP',
+      errName:'Please enter your name.',
+      errAttend:'Please choose a reply.',
+      errEvents:'Please choose at least one event.',
+      resYes:function(n){ return 'Thank you, ' + n + '!'; },
+      resNo:function(n){ return 'Thank you for letting us know, ' + n + '.'; },
+      resBodySend:'One more step: tap below to send your reply to the family.',
+      resBodyShare:'Use the button below to send your reply to the family.',
+      sendWA:'Send on WhatsApp',
+      sendMail:'Send by email',
+      shareReply:'Share reply',
+      copyReply:'Copy reply',
+      editReply:'Edit reply',
+      copied:'Reply copied',
+      msgHead:'RSVP – Aalok & Pratima’s wedding',
+      msgName:'Name', msgReply:'Reply', msgGuests:'Guests', msgEvents:'Events', msgDiet:'Dietary needs', msgNote:'Note',
+      mailSubject:'Wedding RSVP – ',
+      footLine:'11–12 October 2026, Kathmandu',
+      gMinus:'Decrease guests', gPlus:'Increase guests',
+      navHost:'Guest list',
+      hostTitle:'Guest invitations',
+      hostLead:'Choose who is invited to which event. Each guest gets a ready-made message with the right card link. Guests do not see this section.',
+      lkBoth:'Card link: wedding and reception',
+      lkRec:'Card link: reception only',
+      lkHelp:'Paste each card’s share link here.',
+      addNames:'Guest names (one per line)',
+      tBoth:'Wedding and reception', tRec:'Reception only',
+      addBtn:'Add to list',
+      gWA:'Send on WhatsApp', gCopy:'Copy message', gSent:'Sent', gDel:'Remove',
+      empty:'No guests yet. Add names above.',
+      sumWed:function(n){ return 'Wedding: ' + n + (n === 1 ? ' guest' : ' guests'); },
+      sumRec:function(n){ return 'Reception: ' + n + (n === 1 ? ' guest' : ' guests'); },
+      noLink:'This message has no card link. Paste the link above.',
+      msgCopied:'Message copied',
+      inviteBoth:function(n, l){ return 'Dear ' + n + ',\nWe warmly invite you to our wedding (11 October) and reception (12 October).' + (l ? '\n' + l : '') + '\n– Aalok & Pratima'; },
+      inviteRec:function(n, l){ return 'Dear ' + n + ',\nWe warmly invite you to our wedding reception (12 October).' + (l ? '\n' + l : '') + '\n– Aalok & Pratima'; },
+      rec:{
+        shubh:'Wedding Reception',
+        heroDate:'12 October 2026', heroSub:'Monday, 26 Ashoj 2083',
+        countTitle:'Until the reception',
+        today:'Today is the reception!',
+        intro:'We warmly invite you to the reception celebrating the wedding of our beloved son <b>Aalok Shrestha</b> with <b>Pratima Shrestha</b>, beloved daughter of Mr. Pradip Kumar Shrestha and Mrs. Sita Koirala of Devinagar, Butwal-11. Please join us and bless the couple with your gracious presence.'
+      }
+    }
+  };
+
+  var lang = 'ne';
+  try { var sv = localStorage.getItem('card-lang'); if (sv && T[sv]) lang = sv; } catch(e){}
+
+  var MODE = CONFIG.mode === 'reception' ? 'reception' : 'both';
+  var venue = MODE === 'reception' ? 1 : 0;
+  var hostOn = false;
+  var lastReply = null;
+  var guests = 1;
+
+  function num(n){ return lang === 'ne' ? nd(n) : String(n); }
+  function pad2(n){ return n < 10 ? '0' + n : String(n); }
+  function plain(html){ var d = document.createElement('div'); d.innerHTML = html; return d.textContent; }
+
+  /* ---------- i18n ---------- */
+  function apply(l){
+    lang = l;
+    var d = T[l];
+    document.documentElement.lang = l;
+    document.querySelectorAll('[data-k]').forEach(function(el){
+      var k = el.getAttribute('data-k');
+      var v = (MODE === 'reception' && d.rec && d.rec[k] !== undefined) ? d.rec[k] : d[k];
+      if (typeof v === 'string') el.innerHTML = v;
+    });
+    document.querySelectorAll('.lang button').forEach(function(b){
+      b.setAttribute('aria-pressed', b.getAttribute('data-lang') === l ? 'true' : 'false');
+    });
+    document.getElementById('cal1').href = calLink(d.calT1, '20261011', '20261012', d.v1n);
+    document.getElementById('cal2').href = calLink(d.calT2, '20261012', '20261013', d.v2n);
+    showGuests();
+    setVenue(venue);
+    clearErrors();
+    tick();
+    if (lastReply) renderResult(lastReply);
+    if (hostOn) renderGuests();
+    try { localStorage.setItem('card-lang', l); } catch(e){}
+  }
+
+  function calLink(title, d0, d1, loc){
+    return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(title) +
+           '&dates=' + d0 + '/' + d1 + '&location=' + encodeURIComponent(loc);
+  }
+
+  /* ---------- Countdown ---------- */
+  function tick(){
+    var now = Date.now();
+    var start = +new Date(MODE === 'reception' ? CONFIG.receptionStart : CONFIG.weddingStart), end = +new Date(CONFIG.weddingEnd);
+    var box = document.getElementById('count'), msg = document.getElementById('count-msg');
+    if (now >= start) {
+      box.hidden = true; msg.hidden = false;
+      msg.textContent = now >= end ? T[lang].past : (MODE === 'reception' && T[lang].rec.today) || T[lang].today;
+      return;
+    }
+    box.hidden = false; msg.hidden = true;
+    var s = Math.floor((start - now) / 1000);
+    var days = Math.floor(s / 86400); s -= days * 86400;
+    var hrs = Math.floor(s / 3600);   s -= hrs * 3600;
+    var mins = Math.floor(s / 60);    s -= mins * 60;
+    document.getElementById('cd-d').textContent = num(days);
+    document.getElementById('cd-h').textContent = lang === 'ne' ? nd(pad2(hrs)) : pad2(hrs);
+    document.getElementById('cd-m').textContent = lang === 'ne' ? nd(pad2(mins)) : pad2(mins);
+    document.getElementById('cd-s').textContent = lang === 'ne' ? nd(pad2(s)) : pad2(s);
+  }
+  setInterval(tick, 1000);
+
+  /* ---------- Location ---------- */
+  function mapsSearch(q){ return 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q); }
+  function mapsDir(q){ return 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(q); }
+
+  function setVenue(i){
+    venue = i;
+    var d = T[lang];
+    document.querySelectorAll('.tab').forEach(function(b){
+      b.setAttribute('aria-pressed', +b.getAttribute('data-venue') === i ? 'true' : 'false');
+    });
+    document.getElementById('pv-name').textContent = i === 0 ? d.v1n : d.v2n;
+    document.getElementById('pv-when').textContent = i === 0 ? d.e1t + ', ' + d.e1g : d.e2t + ', ' + d.e2g;
+    document.getElementById('g-minus').setAttribute('aria-label', d.gMinus);
+    document.getElementById('g-plus').setAttribute('aria-label', d.gPlus);
+    document.getElementById('map-open').href = mapsSearch(CONFIG.venues[i].query);
+    document.getElementById('map-dir').href = mapsDir(CONFIG.venues[i].query);
+  }
+  document.querySelectorAll('.tab').forEach(function(b){
+    b.addEventListener('click', function(){ setVenue(+b.getAttribute('data-venue')); });
+  });
+  document.querySelectorAll('a[data-venue]').forEach(function(a){
+    a.addEventListener('click', function(){ setVenue(+a.getAttribute('data-venue')); });
+  });
+
+  /* ---------- RSVP ---------- */
+  var form = document.getElementById('rsvp-form');
+  var more = document.getElementById('more');
+
+  function showGuests(){ document.getElementById('g-val').textContent = num(guests); }
+  document.getElementById('g-minus').addEventListener('click', function(){ if (guests > 1) { guests--; showGuests(); } });
+  document.getElementById('g-plus').addEventListener('click', function(){ if (guests < 8) { guests++; showGuests(); } });
+
+  form.querySelectorAll('input[name="attend"]').forEach(function(r){
+    r.addEventListener('change', function(){
+      more.hidden = form.elements.attend.value !== 'yes';
+      document.getElementById('err-attend').textContent = '';
+    });
+  });
+
+  function clearErrors(){
+    ['err-name','err-attend','err-events'].forEach(function(id){ document.getElementById(id).textContent = ''; });
+  }
+
+  function evLabel(k){ return plain(T[lang][k === 'e1' ? 'ev1' : 'ev2']); }
+
+  function compose(d){
+    var t = T[lang];
+    var lines = [t.msgHead, t.msgName + ': ' + d.name, t.msgReply + ': ' + (d.attend === 'yes' ? t.yes : t.no)];
+    if (d.attend === 'yes') {
+      lines.push(t.msgGuests + ': ' + num(d.guests));
+      lines.push(t.msgEvents + ': ' + d.events.map(evLabel).join(', '));
+      if (d.diet) lines.push(t.msgDiet + ': ' + d.diet);
+    }
+    if (d.note) lines.push(t.msgNote + ': ' + d.note);
+    return lines.join('\n');
+  }
+
+  function flash(text){ document.getElementById('status').textContent = text; }
+
+  async function copyText(text){
+    try { await navigator.clipboard.writeText(text); flash(T[lang].copied); }
+    catch(e){ flash(text); }
+  }
+
+  function mkBtn(label, cls, onClick){
+    var b = document.createElement('button');
+    b.type = 'button'; b.className = 'btn ' + cls; b.textContent = label;
+    b.addEventListener('click', onClick);
+    return b;
+  }
+  function mkLink(label, cls, href){
+    var a = document.createElement('a');
+    a.className = 'btn ' + cls; a.textContent = label; a.href = href;
+    a.target = '_blank'; a.rel = 'noopener';
+    return a;
+  }
+
+  function renderResult(d){
+    var t = T[lang];
+    var text = compose(d);
+    var wa = (CONFIG.rsvpWhatsApp || '').replace(/\D/g, '');
+    var mail = CONFIG.rsvpEmail || '';
+    document.getElementById('res-title').textContent = d.attend === 'yes' ? t.resYes(d.name) : t.resNo(d.name);
+    document.getElementById('res-body').textContent = (wa || mail) ? t.resBodySend : t.resBodyShare;
+    var box = document.getElementById('res-btns');
+    box.textContent = '';
+    if (wa) box.appendChild(mkLink(t.sendWA, 'solid', 'https://wa.me/' + wa + '?text=' + encodeURIComponent(text)));
+    if (mail) box.appendChild(mkLink(t.sendMail, wa ? '' : 'solid', 'mailto:' + mail + '?subject=' + encodeURIComponent(t.mailSubject + d.name) + '&body=' + encodeURIComponent(text)));
+    if (!wa && !mail && navigator.share) {
+      box.appendChild(mkBtn(t.shareReply, 'solid', async function(){
+        try { await navigator.share({ text: text }); } catch(e){ if (!e || e.name !== 'AbortError') copyText(text); }
+      }));
+    }
+    box.appendChild(mkBtn(t.copyReply, (!wa && !mail && !navigator.share) ? 'solid' : '', function(){ copyText(text); }));
+    box.appendChild(mkBtn(t.editReply, '', function(){
+      document.getElementById('result').hidden = true;
+      form.hidden = false;
+      document.getElementById('f-name').focus();
+    }));
+    flash('');
+  }
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    clearErrors();
+    var t = T[lang];
+    var name = form.elements.name.value.trim();
+    var attend = form.elements.attend.value;
+    var events = MODE === 'reception' ? ['e2'] : Array.prototype.map.call(form.querySelectorAll('input[name="ev"]:checked'), function(i){ return i.value; });
+    var bad = null;
+    if (!name) { document.getElementById('err-name').textContent = t.errName; bad = bad || 'f-name'; }
+    if (!attend) { document.getElementById('err-attend').textContent = t.errAttend; bad = bad || 'err-attend'; }
+    if (attend === 'yes' && !events.length) { document.getElementById('err-events').textContent = t.errEvents; bad = bad || 'err-events'; }
+    if (bad) {
+      var el = document.getElementById(bad);
+      if (bad === 'f-name') el.focus(); else el.scrollIntoView({ block: 'center' });
+      return;
+    }
+    lastReply = {
+      name: name, attend: attend, guests: guests, events: events,
+      diet: form.elements.diet.value.trim(), note: form.elements.note.value.trim()
+    };
+    renderResult(lastReply);
+    form.hidden = true;
+    var r = document.getElementById('result');
+    r.hidden = false;
+    r.scrollIntoView({ block: 'center' });
+  });
+
+  document.querySelectorAll('.lang button').forEach(function(b){
+    b.addEventListener('click', function(){ apply(b.getAttribute('data-lang')); });
+  });
+
+  /* ---------- Guest list (only the couple sees this) ---------- */
+  if (MODE === 'reception') {
+    document.querySelectorAll('.only-both').forEach(function(el){ el.hidden = true; });
+  }
+
+  var GL_KEY = 'card-guests', LK_KEY = 'card-links';
+  var guestList = [];
+  var links = { both: CONFIG.links.both || '', rec: CONFIG.links.reception || '' };
+  try {
+    var g0 = JSON.parse(localStorage.getItem(GL_KEY) || '[]');
+    if (Array.isArray(g0)) guestList = g0.filter(function(x){ return x && typeof x.name === 'string' && (x.tier === 'both' || x.tier === 'rec'); });
+    var l0 = JSON.parse(localStorage.getItem(LK_KEY) || 'null');
+    if (l0) { if (l0.both) links.both = l0.both; if (l0.rec) links.rec = l0.rec; }
+  } catch(e){}
+
+  function saveGuests(){ try { localStorage.setItem(GL_KEY, JSON.stringify(guestList)); } catch(e){} }
+  function saveLinks(){ try { localStorage.setItem(LK_KEY, JSON.stringify(links)); } catch(e){} }
+  function planFlash(m){ document.getElementById('plan-status').textContent = m; }
+  function el(tag, cls, text){ var n = document.createElement(tag); if (cls) n.className = cls; if (text) n.textContent = text; return n; }
+
+  function msgFor(g){
+    var t = T[lang];
+    var link = (g.tier === 'both' ? links.both : links.rec).trim();
+    return (g.tier === 'both' ? t.inviteBoth : t.inviteRec)(g.name, link);
+  }
+
+  function renderGuests(){
+    var t = T[lang];
+    var rows = document.getElementById('guest-rows');
+    var sum = document.getElementById('g-sum');
+    rows.textContent = ''; sum.textContent = '';
+    document.getElementById('g-empty').hidden = guestList.length > 0;
+    if (!guestList.length) return;
+    var nb = guestList.filter(function(x){ return x.tier === 'both'; }).length;
+    sum.appendChild(el('span', '', t.sumWed(nb)));
+    sum.appendChild(el('span', '', t.sumRec(guestList.length)));
+
+    guestList.forEach(function(g, idx){
+      var row = el('div', 'guest');
+      row.appendChild(el('p', 'gn' + (g.sent ? ' sent' : ''), g.name));
+
+      var tier = el('div', 'g-tier');
+      tier.setAttribute('role', 'group');
+      [['rec', t.tRec], ['both', t.tBoth]].forEach(function(p){
+        var b = el('button', '', p[1]);
+        b.type = 'button';
+        b.setAttribute('aria-pressed', g.tier === p[0] ? 'true' : 'false');
+        b.addEventListener('click', function(){ g.tier = p[0]; saveGuests(); renderGuests(); });
+        tier.appendChild(b);
+      });
+      row.appendChild(tier);
+
+      var acts = el('div', 'g-acts');
+      var wa = el('a', 'lnk', t.gWA);
+      wa.href = 'https://wa.me/?text=' + encodeURIComponent(msgFor(g));
+      wa.target = '_blank'; wa.rel = 'noopener';
+      wa.addEventListener('click', function(){
+        if (!(g.tier === 'both' ? links.both : links.rec).trim()) planFlash(t.noLink);
+      });
+      acts.appendChild(wa);
+
+      var cp = el('button', 'lnk', t.gCopy);
+      cp.type = 'button';
+      cp.addEventListener('click', async function(){
+        try { await navigator.clipboard.writeText(msgFor(g)); planFlash(t.msgCopied); }
+        catch(e){ planFlash(msgFor(g)); }
+      });
+      acts.appendChild(cp);
+
+      var lbl = el('label', 'sent-lbl');
+      var cb = document.createElement('input');
+      cb.type = 'checkbox'; cb.checked = !!g.sent;
+      cb.addEventListener('change', function(){ g.sent = cb.checked; saveGuests(); renderGuests(); });
+      lbl.appendChild(cb); lbl.appendChild(el('span', '', t.gSent));
+      acts.appendChild(lbl);
+
+      var del = el('button', 'lnk', t.gDel);
+      del.type = 'button';
+      del.addEventListener('click', function(){ guestList.splice(idx, 1); saveGuests(); renderGuests(); });
+      acts.appendChild(del);
+
+      row.appendChild(acts);
+      rows.appendChild(row);
+    });
+  }
+
+  function enableHost(){
+    if (MODE !== 'both' || hostOn) return;
+    hostOn = true;
+    document.getElementById('guest-list').hidden = false;
+    document.getElementById('nav-host').hidden = false;
+    document.getElementById('lk-both').value = links.both;
+    document.getElementById('lk-rec').value = links.rec;
+    renderGuests();
+  }
+
+  document.getElementById('lk-both').addEventListener('input', function(e){ links.both = e.target.value; saveLinks(); renderGuests(); });
+  document.getElementById('lk-rec').addEventListener('input', function(e){ links.rec = e.target.value; saveLinks(); renderGuests(); });
+  document.getElementById('add-btn').addEventListener('click', function(){
+    var ta = document.getElementById('add-names');
+    var tier = document.querySelector('input[name="addtier"]:checked').value;
+    ta.value.split('\n').forEach(function(line){
+      var n = line.trim().slice(0, 80);
+      if (n) guestList.push({ name: n, tier: tier, sent: false });
+    });
+    ta.value = '';
+    saveGuests(); renderGuests(); planFlash('');
+  });
+
+  if (MODE === 'both') {
+    if (location.hash === '#host') enableHost();
+    window.addEventListener('hashchange', function(){ if (location.hash === '#host') enableHost(); });
+    try {
+      if (window.claude && typeof window.claude.use === 'function') {
+        window.claude.use('user').then(function(u){
+          return u ? u.isOwner() : false;
+        }).then(function(owner){ if (owner) enableHost(); }).catch(function(){});
+      }
+    } catch(e){}
+  }
+
+  apply(lang);
+})();
+</script>
+</body>
+</html>
